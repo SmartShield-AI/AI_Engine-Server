@@ -3,7 +3,7 @@ import json
 
 import requests
 D =json.load(open("SaveControl.json"))
-API_KEY = D["Vt_api"]  # replace with your VT API key
+API_KEY = "3ecc340fb3c81821ab1ad11680f7a4198da1e3393698072f"  # replace with your VT API key
 BASE_URL = "https://www.virustotal.com/api/v3/files/{}"
 
 def vt_check_hash(sha256_hash):
@@ -28,8 +28,8 @@ def check_hash_malwarebazaar(sha256_hash):
     url = "https://mb-api.abuse.ch/api/v1/"
     headers = {
         "User-Agent": "MalwareLookupScript/1.0",
-        # "Auth-Key": "3ecc340fb3c81821ab1ad11680f7a4198da1e3393698072f"
-        "Auth-Key": D["mal_api"]
+        "Auth-Key": "3ecc340fb3c81821ab1ad11680f7a4198da1e3393698072f"
+        # "Auth-Key": D["mal_api"]
     }
     payload = {
         "query": "get_info",
