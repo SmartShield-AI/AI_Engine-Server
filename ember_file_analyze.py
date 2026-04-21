@@ -4,7 +4,7 @@ import os
 import numpy as np
 from ember.features import PEFeatureExtractor
 
-MODEL_PATH = r"static/Models/ember_model_full.pkl"
+MODEL_PATH = r"Models/ember_model_full.pkl"
 
 def ember_analyze_file(file_path):
     print(f"\n Analyzing file: {file_path}\n")
